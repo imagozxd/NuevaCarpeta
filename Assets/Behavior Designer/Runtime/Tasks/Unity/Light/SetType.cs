@@ -15,7 +15,7 @@ namespace BehaviorDesigner.Runtime.Tasks.Unity.UnityLight
         private Light light;
         private GameObject prevGameObject;
 
-        public override void OnStart()
+        public override void OnAwake()
         {
             var currentGameObject = GetDefaultGameObject(targetGameObject.Value);
             if (currentGameObject != prevGameObject) {

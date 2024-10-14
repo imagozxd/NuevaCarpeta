@@ -19,7 +19,7 @@ namespace BehaviorDesigner.Runtime.Tasks
         private bool eventReceived = false;
         private bool registered = false;
 
-        public override void OnStart()
+        public override void OnAwake()
         {
             // Let the behavior tree know that we are interested in receiving the event specified
             if (!registered) {

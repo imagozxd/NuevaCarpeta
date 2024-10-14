@@ -16,7 +16,7 @@ namespace BehaviorDesigner.Runtime.Tasks.Unity.UnityRigidbody2D
         private Rigidbody2D rigidbody2D;
         private GameObject prevGameObject;
 
-        public override void OnStart()
+        public override void OnAwake()
         {
             var currentGameObject = GetDefaultGameObject(targetGameObject.Value);
             if (currentGameObject != prevGameObject) {

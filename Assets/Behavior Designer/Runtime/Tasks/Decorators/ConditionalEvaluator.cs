@@ -29,7 +29,7 @@ namespace BehaviorDesigner.Runtime.Tasks
         public override void OnStart()
         {
             if (conditionalTask != null) {
-                conditionalTask.OnStart();
+                conditionalTask.OnAwake();
             }
         }
 

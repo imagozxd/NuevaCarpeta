@@ -316,7 +316,10 @@ public class IAEyeBase : MonoBehaviour
         {
             ViewEnemy = null;
         }
-
+        if (ViewAllie != null && ((ViewAllie.IsDead) || (!ViewAllie.IsCantView)))
+        {
+            ViewAllie = null;
+        }
     }
 
     public virtual void Scan()
@@ -346,7 +349,7 @@ public class IAEyeBase : MonoBehaviour
                     Scanhealth.IsCantView &&
                     mainDataView.IsInSight(Scanhealth.AimOffset))
                 {
-                    ExtractViewEnemy(ref min_dist, Scanhealth);
+                    ExtractViewEnemyViewAllie(ref min_dist, Scanhealth);
                 }
 
             }
@@ -357,7 +360,7 @@ public class IAEyeBase : MonoBehaviour
 
     }
 
-    private void ExtractViewEnemy(ref float min_dist, Health _health)
+    public void ExtractViewEnemyViewAllie(ref float min_dist, Health _health)
     {
         
         if (!IsAllies(_health))
@@ -372,12 +375,11 @@ public class IAEyeBase : MonoBehaviour
             }
             CountEnemyView++;
         }
-        //else
-        //if (_health.gameObject.CompareTag("Player"))
-        //{
-        //    if (ViewAllie == null)
-        //        ViewAllie = _health;
-        //}
+        else
+        {
+            if (ViewAllie == null)
+                ViewAllie = _health;
+        }
 
     }
 

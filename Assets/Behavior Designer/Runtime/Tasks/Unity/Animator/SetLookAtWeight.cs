@@ -21,7 +21,7 @@ namespace BehaviorDesigner.Runtime.Tasks.Unity.UnityAnimator
         private Animator animator;
         private bool weightSet;
 
-        public override void OnStart()
+        public override void OnAwake()
         {
             animator = GetComponent<Animator>();
             weightSet = false;

@@ -17,7 +17,7 @@ namespace BehaviorDesigner.Runtime.Tasks.Unity.UnityTransform
         private Transform targetTransform;
         private GameObject prevGameObject;
 
-        public override void OnStart()
+        public override void OnAwake()
         {
             var currentGameObject = GetDefaultGameObject(targetGameObject.Value);
             if (currentGameObject != prevGameObject) {

@@ -14,7 +14,7 @@ namespace BehaviorDesigner.Runtime.Tasks.Unity.UnityNavMeshAgent
         private NavMeshAgent navMeshAgent;
         private GameObject prevGameObject;
 
-        public override void OnStart()
+        public override void OnAwake()
         {
             var currentGameObject = GetDefaultGameObject(targetGameObject.Value);
             if (currentGameObject != prevGameObject) {

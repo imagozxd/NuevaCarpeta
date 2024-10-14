@@ -19,7 +19,7 @@ namespace BehaviorDesigner.Runtime.Tasks
         // A list of children that can execute.
         private List<int> availableChildren = new List<int>();
 
-        public override void OnStart()
+        public override void OnAwake()
         {
             highestUtility = float.MinValue;
 

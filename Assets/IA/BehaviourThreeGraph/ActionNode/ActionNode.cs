@@ -9,13 +9,21 @@ public class ActionNode : Action
     protected IACharacterVehiculo _IACharacterVehiculo;
     protected IACharacterActions _IACharacterActions;
     protected UnitGame _UnitGame;
-    public override void OnStart()
+    public override void OnAwake()
     {
-        base.OnStart();
+        base.OnAwake();
         _IACharacterVehiculo = GetComponent<IACharacterVehiculo>();
         _IACharacterActions = GetComponent<IACharacterActions>();
-        _UnitGame = _IACharacterVehiculo.health._UnitGame;
+        if (_IACharacterVehiculo.health != null)
+            _UnitGame = _IACharacterVehiculo.health._UnitGame;
     }
+    //public override void OnStart()
+    //{
+        
+    //    {
 
-     
+    //    }
+    //   _UnitGame = _IACharacterVehiculo.health._UnitGame;
+    //}
+
 }

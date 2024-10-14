@@ -12,7 +12,7 @@ namespace BehaviorDesigner.Runtime.Tasks.Unity.UnityAnimator
         private Animator animator;
         private bool positionSet;
 
-        public override void OnStart()
+        public override void OnAwake()
         {
             animator = GetComponent<Animator>();
             positionSet = false;

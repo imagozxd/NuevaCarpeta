@@ -5,9 +5,9 @@ using BehaviorDesigner.Runtime.Tasks;
 [TaskCategory("MyAI/Range")]
 public class ActionNotColliderRadioAction : ActionNodeRange
 {
-    public override void OnStart()
+    public override void OnAwake()
     {
-        base.OnStart();
+        base.OnAwake();
     }
     public override TaskStatus OnUpdate()
     {

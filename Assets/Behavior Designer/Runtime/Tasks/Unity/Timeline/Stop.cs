@@ -13,7 +13,7 @@ namespace BehaviorDesigner.Runtime.Tasks.Unity.Timeline
         private PlayableDirector playableDirector;
         private GameObject prevGameObject;
 
-        public override void OnStart()
+        public override void OnAwake()
         {
             var currentGameObject = GetDefaultGameObject(targetGameObject.Value);
             if (currentGameObject != prevGameObject) {

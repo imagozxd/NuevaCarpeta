@@ -7,9 +7,9 @@ public class ActionNodeAction : ActionNode
 {
      
 
-    public override void OnStart()
+    public override void OnAwake()
     {
-        base.OnStart();
+        base.OnAwake();
     }
 
      

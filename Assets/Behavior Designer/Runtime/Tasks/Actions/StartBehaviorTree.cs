@@ -18,7 +18,7 @@ namespace BehaviorDesigner.Runtime.Tasks
         private bool behaviorComplete;
         private Behavior behavior;
 
-        public override void OnStart()
+        public override void OnAwake()
         {
             var behaviorTrees = GetDefaultGameObject(behaviorGameObject.Value).GetComponents<Behavior>();
             if (behaviorTrees.Length == 1) {

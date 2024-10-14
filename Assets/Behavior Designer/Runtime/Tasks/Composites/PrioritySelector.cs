@@ -15,7 +15,7 @@ namespace BehaviorDesigner.Runtime.Tasks
         // The order to run its children in. 
         private List<int> childrenExecutionOrder = new List<int>();
 
-        public override void OnStart()
+        public override void OnAwake()
         {
             // Make sure the list is empty before we add child indexes to it.
             childrenExecutionOrder.Clear();

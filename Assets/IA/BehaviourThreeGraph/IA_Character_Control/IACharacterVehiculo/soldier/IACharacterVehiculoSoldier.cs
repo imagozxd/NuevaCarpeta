@@ -27,6 +27,10 @@ public class IACharacterVehiculoSoldier : IACharacterVehiculo
     {
         base.MoveToAllied( );
     }
+    public override void MoveToWander()
+    {
+        base.MoveToWander();
+    }
     public override void MoveToEvadEnemy()
     {
         base.MoveToEvadEnemy( );

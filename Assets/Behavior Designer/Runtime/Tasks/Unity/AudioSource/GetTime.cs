@@ -15,7 +15,7 @@ namespace BehaviorDesigner.Runtime.Tasks.Unity.UnityAudioSource
         private AudioSource audioSource;
         private GameObject prevGameObject;
 
-        public override void OnStart()
+        public override void OnAwake()
         {
             var currentGameObject = GetDefaultGameObject(targetGameObject.Value);
             if (currentGameObject != prevGameObject) {

@@ -18,7 +18,7 @@ namespace BehaviorDesigner.Runtime.Tasks.Unity.Timeline
         private GameObject prevGameObject;
         private bool playbackStarted;
 
-        public override void OnStart()
+        public override void OnAwake()
         {
             var currentGameObject = GetDefaultGameObject(targetGameObject.Value);
             if (currentGameObject != prevGameObject) {

@@ -7,9 +7,9 @@ public class ActionNodeShoot : ActionNodeAction
 {
      
 
-    public override void OnStart()
+    public override void OnAwake()
     {
-        base.OnStart();
+        base.OnAwake();
     }
     public override TaskStatus OnUpdate()
     {

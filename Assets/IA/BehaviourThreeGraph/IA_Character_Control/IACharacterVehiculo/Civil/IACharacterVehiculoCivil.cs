@@ -6,7 +6,7 @@ public class IACharacterVehiculoCivil : IACharacterVehiculo
 {
     Vector3 normales = Vector3.zero;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         this.LoadComponent();
     }
@@ -30,6 +30,27 @@ public class IACharacterVehiculoCivil : IACharacterVehiculo
     public override void MoveToEvadEnemy()
     {
         base.MoveToEvadEnemy( );
+    }
+    public void MoveToItem()
+    {
+        if (AIEye is IAEyeCivil)
+        {
+            if (((IAEyeCivil)AIEye).ViewItems != null)
+            {
+                MoveToPosition(((IAEyeCivil)AIEye).ViewItems.transform.position);
+            }
+        }
+    }
+    public void LookToItem()
+    {
+        if (AIEye is IAEyeCivil)
+        {
+            if (((IAEyeCivil)AIEye).ViewItems != null)
+            {
+                LookPosition(((IAEyeCivil)AIEye).ViewItems.transform.position);
+            }
+        }
+
     }
     public void MoveToStrategy()
     {

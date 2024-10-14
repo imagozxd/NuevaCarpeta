@@ -14,7 +14,7 @@ namespace BehaviorDesigner.Runtime.Tasks.Unity.UnityBoxCollider2D
         private BoxCollider2D boxCollider2D;
         private GameObject prevGameObject;
 
-        public override void OnStart()
+        public override void OnAwake()
         {
             var currentGameObject = GetDefaultGameObject(targetGameObject.Value);
             if (currentGameObject != prevGameObject) {
